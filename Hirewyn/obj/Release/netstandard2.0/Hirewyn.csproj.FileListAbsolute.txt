@@ -1,0 +1,9 @@
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\bin\Release\netstandard2.0\Hirewyn.deps.json
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\bin\Release\netstandard2.0\Hirewyn.dll
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\bin\Release\netstandard2.0\Hirewyn.pdb
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\obj\Release\netstandard2.0\Hirewyn.csprojAssemblyReference.cache
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\obj\Release\netstandard2.0\Hirewyn.csproj.CoreCompileInputs.cache
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\obj\Release\netstandard2.0\Hirewyn.AssemblyInfoInputs.cache
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\obj\Release\netstandard2.0\Hirewyn.AssemblyInfo.cs
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\obj\Release\netstandard2.0\Hirewyn.dll
+C:\Users\Aeonyphiel\source\repos\AeonyphielsSpellIndex\Hirewyn\obj\Release\netstandard2.0\Hirewyn.pdb

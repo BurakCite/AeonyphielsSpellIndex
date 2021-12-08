@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KZD2Q3HktXxtnz3N1aJ6O14RJtK48/hWIlofzUd4Y8xTGjqZMUbPT75DhlEKMrNVSI7MM8XA1TZnAgxmDOuNJg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aeonyphiel\\source\\repos\\AeonyphielsSpellIndex\\Hirewyn\\Hirewyn.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aeonyphiel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Aeonyphiel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#ClassNameDropdownList').val('@(ViewBag.ClassName)');
+        $('#MinLevelTextBox').val('@(ViewBag.MinLevel)');
+        $('#MaxLevelTextBox').val('@(ViewBag.MaxLevel)');
+        $('#RitualDropdownList').val('@(ViewBag.Ritual)');
+        $('#DiceDropdownList').val('@(ViewBag.Dice)');
+        $('#MinimumCastingTimeTextBox').val('@(ViewBag.MinimumCastingTimeValue)');
+        $('#MinimumCastingTimeDropdownList').val('@(ViewBag.MinimumCastingTimeType)');
+        $('#MaximumCastingTimeTextBox').val('@(ViewBag.MaximumCastingTimeValue)');
+        $('#MaximumCastingTimeDropdownList').val('@(ViewBag.MaximumCastingTimeType)');
+        $('#MinimumRangeTextBox').val('@(ViewBag.MinimumRangeValue)');
+        $('#MinimumRangeDropdownList').val('@(ViewBag.MinimumRangeType)');
+        $('#MaximumRangeTextBox').val('@(ViewBag.MaximumRangeValue)');
+        $('#MaximumRangeDropdownList').val('@(ViewBag.MaximumRangeType)');
+        $('#ComponentsDropdownList').val('@(ViewBag.Components)');
+        $('#ConcentrationDropdownList').val('@(ViewBag.Concentration)');
+        $('#MinimumDurationTextBox').val('@(ViewBag.MinimumDurationValue)');
+        $('#MinimumDurationDropdownList').val('@(ViewBag.MinimumDurationType)');
+        $('#MaximumDurationTextBox').val('@(ViewBag.MaximumDurationValue)');
+        $('#MaximumDurationDropdownList').val('@(ViewBag.MaximumDurationType)');
+        $('#HigherLevelsDropdownList').val('@(ViewBag.HigherLevels)');
+        
+    });
+</script>
+<h2>Filter Spells</h2>
+<form action="~/Home/Filter">
+    <label>Class:</label>
+    <select id="ClassNameDropdownList" name="classNameDropdownList">
+        <option value="All">All</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+    </select><br />
+    <label>Minimum Level:</label>
+    <input type="text" id="MinLevelTextBox" name="minLevelTextBox" /><br />
+    <label>Maximum Level:</label>
+    <input type="text" id="MaxLevelTextBox" name="maxLevelTextBox" /><br />
+    <label>Ritual:</label>
+    <select id="RitualDropdownList" name="ritualDropdownList">
+        <option value="All">All</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select><br />
+    <label>Require Dice?:</label>
+    <select id="DiceDropdownList" name="diceDropdownList">
+        <option value="All">All</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select><br />
+
+
+
+    <label>Minimum Casting Time:</label>
+    <input type="text" id="MinimumCastingTimeTextBox" name="minimumCastingTimeTextBox" />
+    <select id="MinimumCastingTimeDropdownList" name="minimumCastingTimeDropdownList">
+        <option value="-1">Special</option>
+        <option value="0" selected="selected">Instantaneous</option>
+        <option value="1">Reaction</option>
+        <option value="2">Bonus Action</option>
+        <option value="3">Action</option>
+        <option value="4">Round</option>
+        <option value="5">Minute</option>
+        <option value="6">Hour</option>
+        <option value="7">Day</option>
+        <option value="8">Year</option>
+        <option value="9">Until Dispelled</option>
+    </select><br />
+    <label>Maximum Casting Time:</label>
+    <input type="text" id="MaximumCastingTimeTextBox" name="maximumCastingTimeTextBox" />
+    <select id="MaximumCastingTimeDropdownList" name="maximumCastingTimeDropdownList">
+        <option value="-1">Special</option>
+        <option value="0">Instantaneous</option>
+        <option value="1">Reaction</option>
+        <option value="2">Bonus Action</option>
+        <option value="3">Action</option>
+        <option value="4">Round</option>
+        <option value="5">Minute</option>
+        <option value="6">Hour</option>
+        <option value="7">Day</option>
+        <option value="8">Year</option>
+        <option value="9" selected="selected">Until Dispelled</option>
+    </select><br />
+
+    <label>Minimum Range:</label>
+    <input type="text" id="MinimumRangeTextBox" name="minimumRangeTextBox" />
+    <select id="MinimumRangeDropdownList" name="minimumRangeDropdownList">
+        <option value="-1">Special</option>
+        <option value="0" selected="selected">Self</option>
+        <option value="1">Touch</option>
+        <option value="2">Feet</option>
+        <option value="3">Mile</option>
+        <option value="4">Sight</option>
+        <option value="5">Unlimited</option>
+    </select><br />
+    <label>Maximum Range:</label>
+    <input type="text" id="MaximumRangeTextBox" name="maximumRangeTextBox" />
+    <select id="MaximumRangeDropdownList" name="maximumRangeDropdownList">
+        <option value="-1">Special</option>
+        <option value="0">Self</option>
+        <option value="1">Touch</option>
+        <option value="2">Feet</option>
+        <option value="3">Mile</option>
+        <option value="4">Sight</option>
+        <option value="5" selected="selected">Unlimited</option>
+    </select><br />
+
+
+
+    <label>Components:</label>
+    <select id="ComponentsDropdownList" name="componentsDropdownList">
+        <option value="All" selected="selected">All</option>
+        <option value="0">No Material Component</option>
+        <option value="1">Spell Component Pouch</option>
+        <option value="2">Reuseable Material</option>
+        <option value="3">Consumed Material</option>
+    </select><br />
+    <label>Concentration:</label>
+    <select id="ConcentrationDropdownList" name="concentrationDropdownList">
+        <option value="All">All</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select><br />
+    <label>Minimum Duration:</label>
+    <input type="text" id="MinimumDurationTextBox" name="minimumDurationTextBox" />
+    <select id="MinimumDurationDropdownList" name="minimumDurationDropdownList">
+        <option value="-2">All</option>
+        <option value="-1">Special</option>
+        <option value="0" selected="selected">Instantaneous</option>
+        <option value="1">Reaction</option>
+        <option value="2">Bonus Action</option>
+        <option value="3">Action</option>
+        <option value="4">Round</option>
+        <option value="5">Minute</option>
+        <option value="6">Hour</option>
+        <option value="7">Day</option>
+        <option value="8">Year</option>
+        <option value="9">Until Dispelled</option>
+    </select><br />
+    <label>Maximum Duration:</label>
+    <input type="text" id="MaximumDurationTextBox" name="maximumDurationTextBox" />
+    <select id="MaximumDurationDropdownList" name="maximumDurationDropdownList">
+        <option value="-2">All</option>
+        <option value="-1">Special</option>
+        <option value="0">Instantaneous</option>
+        <option value="1">Reaction</option>
+        <option value="2">Bonus Action</option>
+        <option value="3">Action</option>
+        <option value="4">Round</option>
+        <option value="5">Minute</option>
+        <option value="6">Hour</option>
+        <option value="7">Day</option>
+        <option value="8">Year</option>
+        <option value="9" selected="selected">Until Dispelled</option>
+    </select><br />
+    <label>Higher Levels:</label>
+    <select id="HigherLevelsDropdownList" name="higherLevelsDropdownList">
+        <option value="All" selected="selected">All</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select><br />
+    <input type="submit" value="Filter" />
+</form>
+<table border="1">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Effect
+        </th>
+    </tr>
+    @foreach (Hirewyn.Spell spell in ViewBag.Spells)
+    {
+        <tr>
+            <td>
+                <a href="~/Home/Detail?spellName=@spell.Name">
+                    @spell.Name
+                </a>
+            </td>
+            <td>
+                @spell.Effect
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<form action="~/Home/Filter">
+    <input type="submit" value="Filter Spells" />
+</form>
+<table border="1">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Effect
+        </th>
+    </tr>
+    @for (int spellLevel = 0; spellLevel < 10; spellLevel++)
+    {
+        foreach (Hirewyn.Spell spell in ((List<Hirewyn.Spell>)ViewBag.Spells).Where(e => e.Level == spellLevel).OrderBy(e => e.Name))
+        {
+            <tr>
+                <td>
+                    <a href="~/Home/Detail?spellName=@spell.Name">
+                        @spell.Name
+                    </a>
+                </td>
+                <td>
+                    @spell.Effect
+                </td>
+            </tr>
+        }
+    }
+</table>

@@ -1,0 +1,19 @@
+﻿<script type="text/javascript">
+    $(document).prop('title', '@ViewBag.Spell.Name');
+</script>
+
+<h2>@ViewBag.Spell.Name</h2>
+Add description to reaction<br />
+@ViewBag.Spell.GetClasses()<br />
+@(ViewBag.Spell.Level) level @(ViewBag.Spell.School.ToLower()) @(ViewBag.Spell.Ritual ? "(ritual)" : "")<br />
+<br />
+<b>Casting Time:</b> @ViewBag.Spell.CastingTime.GetTime()<br />
+<b>Range:</b> @ViewBag.Spell.Range.GetDistance()<br />
+<b>Components:</b> @ViewBag.Spell.Components<br />
+<b>Duration:</b> @(ViewBag.Spell.Concentration ? "Concentration, up to " : "")@ViewBag.Spell.Duration.GetTime()<br />
+<br />
+@ViewBag.Spell.Description<br />
+@if (@ViewBag.Spell.HigherLevels.Trim() != "No")
+{
+    <b>At Higher Levels.</b> @ViewBag.Spell.HigherLevels
+}
